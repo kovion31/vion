@@ -1,0 +1,17 @@
+// поиск
+car.find('a')
+
+// замена
+ car.replace('a', 'R')
+
+// верхний регистр
+ car.upper()
+
+// нижний регистр
+ car.lower()
+
+// все ли буквы
+car.isalpha()
+
+// все ли цифвы
+car.isdigit()
