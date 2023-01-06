@@ -28,6 +28,74 @@ import simple_draw as sd
 # Результат решения см lesson_004/results/exercise_01_shapes.jpg
 
 # TODO здесь ваш код
+# - треугольник
+length = 100
+width = 2
+angle = 20
+point = sd.get_point(100, 100)
+
+v1 = sd.get_vector(start_point=point, angle=angle, length=length, width=width)
+v1.draw()
+
+v2 = sd.get_vector(start_point=v1.end_point, angle=angle + 120, length=length, width=width)
+v2.draw()
+
+v3 = sd.get_vector(start_point=v2.end_point, angle=angle + 240, length=length, width=width)
+v3.draw()
+
+# - квадрат
+point = sd.get_point(400, 100)
+
+v1 = sd.get_vector(start_point=point, angle=angle, length=length, width=width)
+v1.draw()
+
+v2 = sd.get_vector(start_point=v1.end_point, angle=angle + 90, length=length, width=width)
+v2.draw()
+
+v3 = sd.get_vector(start_point=v2.end_point, angle=angle + 180, length=length, width=width)
+v3.draw()
+
+v4 = sd.get_vector(start_point=v3.end_point, angle=angle + 270, length=length, width=width)
+v4.draw()
+
+# - пятиугольник
+point = sd.get_point(100, 400)
+
+v1 = sd.get_vector(start_point=point, angle=angle, length=length, width=width)
+v1.draw()
+
+v2 = sd.get_vector(start_point=v1.end_point, angle=angle + 72, length=length, width=width)
+v2.draw()
+
+v3 = sd.get_vector(start_point=v2.end_point, angle=angle + 72 * 2, length=length, width=width)
+v3.draw()
+
+v4 = sd.get_vector(start_point=v3.end_point, angle=angle + 72 * 3, length=length, width=width)
+v4.draw()
+
+v5 = sd.get_vector(start_point=v4.end_point, angle=angle + 72 * 4, length=length, width=width)
+v5.draw()
+
+# - шестиугольника
+point = sd.get_point(400, 400)
+
+v1 = sd.get_vector(start_point=point, angle=angle, length=length, width=width)
+v1.draw()
+
+v2 = sd.get_vector(start_point=v1.end_point, angle=angle + 60, length=length, width=width)
+v2.draw()
+
+v3 = sd.get_vector(start_point=v2.end_point, angle=angle + 120, length=length, width=width)
+v3.draw()
+
+v4 = sd.get_vector(start_point=v3.end_point, angle=angle + 180, length=length, width=width)
+v4.draw()
+
+v5 = sd.get_vector(start_point=v4.end_point, angle=angle + 240, length=length, width=width)
+v5.draw()
+
+sd.line(start_point=v5.end_point, end_point=point, width=width)
+
 
 # Часть 1-бис.
 # Попробуйте прикинуть обьем работы, если нужно будет внести изменения в этот код.

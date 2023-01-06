@@ -28,5 +28,5 @@ while i <= month:
 ask = total_expenses - total_educational_grant
 print("Траты за", month, "месяцев", total_expenses, "рублей")
 print("Стипендия за", month, "месяцев", total_educational_grant, "рублей")
-print("Студенту надо попросить", ask, "рублей")
+print("Студенту надо попросить", round(ask, 2), "рублей")
 

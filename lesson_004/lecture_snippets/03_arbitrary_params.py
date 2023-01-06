@@ -39,8 +39,8 @@ print_them_all_v2(**my_friend)
 
 
 # неправильные вызовы
-print_them_all_v1(name='Вася', address='Moscow')
-print_them_all_v2('Вася', 'Moscow', 25)
+# print_them_all_v1(name='Вася', address='Moscow')
+# print_them_all_v2('Вася', 'Moscow', 25)
 
 
 # Комбинация
