@@ -45,9 +45,9 @@ while True:
             y[i] += 600
 
         y[i] -= 10
-        x[i] = x[i] + sd.random_number(-10, 10)
-        # if x[i] > 1200:
-        #     x[i] = 0
+        x[i] = x[i] + sd.random_number(0, 50)
+        if x[i] > 1200:
+            x[i] = 0
 
         point = sd.get_point(x[i], y[i])
         sd.snowflake(center=point, length=length[i], color=sd.COLOR_WHITE)
