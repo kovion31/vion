@@ -4,14 +4,14 @@ from random import randint
 
 import simple_draw as sd
 
-# sd.resolution = (1200, 600)
+sd.resolution = (1200, 600)
 
 # На основе кода из практической части реализовать снегопад:
 # - создать списки данных для отрисовки N снежинок
 # - нарисовать падение этих N снежинок
 # - создать список рандомных длинн лучей снежинок (от 10 до 100) и пусть все снежинки будут разные
 
-N = 100
+N = 200
 
 # Пригодятся функции
 # sd.get_point()
@@ -35,7 +35,7 @@ while True:
     sd.start_drawing()
     i = 0
     while i < N:
-        x.append(sd.random_number(0, 600))
+        x.append(sd.random_number(0, 1200))
         y.append(sd.random_number(0, 600))
         length.append(sd.random_number(5, 25))
         if y[i] > 50:
