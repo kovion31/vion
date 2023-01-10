@@ -7,6 +7,6 @@ def function1():
     print('Hey!')
 
 
-print("Всем привет в этом чате!")
+# print("Всем привет в этом чате!")
 
 # print("Module name is", __name__)

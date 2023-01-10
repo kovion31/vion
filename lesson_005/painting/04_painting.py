@@ -19,7 +19,31 @@
 # Приправить своей фантазией по вкусу (коты? коровы? люди? трактор? что придумается)
 
 # TODO здесь ваш код
+from house import house_paint
+import simple_draw as sd
+from tree import draw_branches
+from snowfall import snowfall
+from rainbow import rainbow
 
+sd.resolution = (1200, 600)
+
+house_paint(250, 50)
+
+root_point = sd.get_point(900, 50)
+draw_branches(point=root_point, angle=90, length=100)
+rainbow()
+
+start_point = sd.get_point(250, 500)
+angle = 0
+while angle < 360:
+    v1 = sd.get_vector(start_point=start_point, angle=angle, length=100, width=5)
+    v1.draw()
+    angle += 36
+sd.circle(center_position=start_point, width=0)
+
+snowfall(0, 50, 200, 600)
+
+sd.pause()
 # Усложненное задание (делать по желанию)
 # Анимировать картину.
 # Пусть слева идет снегопад, радуга переливается цветами, смайлик моргает, солнце крутит лучами, етс.
