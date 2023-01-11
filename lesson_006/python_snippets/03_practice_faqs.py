@@ -27,7 +27,7 @@ rainbow_colors = (sd.COLOR_RED, sd.COLOR_ORANGE, sd.COLOR_YELLOW, sd.COLOR_GREEN
 # Нарисовать стену из кирпичей. Размер кирпича - 100х50
 # использовать вложенные циклы for
 
-brick_x, brick_y = 200, 50
+brick_x, brick_y = 100, 50
 
 row = 0
 for y in range(0, sd.resolution[1], brick_y):

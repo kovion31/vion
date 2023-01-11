@@ -17,18 +17,11 @@ def brick_paint(point_x1, point_y1, brick_width, brick_height):
 
 def wall_paint(point_x1, point_y1, brick_width, brick_height):
     shift = brick_width / 2
-    brick_y = point_y1
-    brick_x = point_x1
     wall_width = 400
     wall_height = 200
-    while brick_y < point_y1 + wall_height:
-        brick_paint(brick_x + shift, brick_y, brick_width, brick_height)
-        brick_x += brick_width
-        while brick_x < point_x1 + wall_width:
+    for brick_y in range(point_y1, point_y1 + wall_height, brick_height):
+        for brick_x in range(point_x1, point_x1 + wall_width, brick_width):
             brick_paint(brick_x + shift, brick_y, brick_width, brick_height)
-            brick_x += brick_width
-        brick_y += brick_height
-        brick_x = point_x1
         if shift == 0:
             shift = brick_width / 2
         else:

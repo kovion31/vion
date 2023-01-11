@@ -9,9 +9,10 @@ def house_paint(house_point_x, house_point_y):
     house_width = 400
     house_height = 200
     brick_width = 50
+    brick_height = 25
 
     # Стена (стартовая точка по Х, стартовая точка по Y, ширина кирпича, высота кирпича)
-    wall_paint(house_point_x, house_point_y, brick_width, 25)
+    wall_paint(house_point_x, house_point_y, brick_width, brick_height)
 
     # Крыша
     start_point = sd.get_point((house_point_x - 25), (house_point_y + house_height))
