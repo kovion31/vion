@@ -29,23 +29,27 @@ class Man:
             self.house.food -= 10
         else:
             cprint('{} нет еды'.format(self.name), color='red')
+            self.fullness -= 5
+            self.shopping()
 
     def work(self):
         cprint('{} сходил на работу'.format(self.name), color='blue')
-        self.house.money += 50
-        self.fullness -= 10
+        self.house.money += 10
+        self.fullness -= 5
 
     def watch_MTV(self):
         cprint('{} смотрел MTV целый день'.format(self.name), color='green')
         self.fullness -= 10
 
     def shopping(self):
-        if self.house.money >= 50:
+        if self.house.money > 0:
             cprint('{} сходил в магазин за едой'.format(self.name), color='magenta')
-            self.house.money -= 50
-            self.house.food += 50
+            # self.house.money -= 50
+            self.house.food = self.house.money
+            self.house.money = 0
         else:
             cprint('{} деньги кончились!'.format(self.name), color='red')
+            self.work()
 
     def go_to_the_house(self, house):
         self.house = house
@@ -94,7 +98,7 @@ for citisen in citizens:
     citisen.go_to_the_house(house=my_sweet_home)
 
 for day in range(1, 366):
-    print('================ день {} =================='.format(day))
+    cprint('================ день {} =================='.format(day), color='yellow')
     for citisen in citizens:
         citisen.act()
     print('--- в конце дня ---')
