@@ -194,8 +194,8 @@ class AutoLoader(Vehicle):
             self.truck.cargo -= self.bucket_capacity
             self.warehouse.content += self.bucket_capacity
         else:
-            self.truck.cargo -= self.truck.cargo
             self.warehouse.content += self.truck.cargo
+            self.truck.cargo -= self.truck.cargo
         print('{} разгружал {}'.format(self.model, self.truck))
         if self.truck.cargo == 0:
             self.warehouse.truck_ready(self.truck)
@@ -222,7 +222,7 @@ for number in range(5):
     moscow.truck_arrived(truck)
     trucks.append(truck)
 for number in range(5):
-    truck = OtherTruck(model='Volvo #{}'.format(number), body_space=10000)
+    truck = OtherTruck(model='Volvo #{}'.format(number), body_space=9900)
     moscow.truck_arrived(truck)
     trucks.append(truck)
 

@@ -53,7 +53,7 @@ class SubmarineRobot(WarRobot):
         print('Охрана ведется под водой')
 
 
-rc_submarine = WarRobot(model='Orbiter', gun='лазер')
+rc_submarine = SubmarineRobot(model='Orbiter', gun='лазер')
 print(rc_submarine)
 rc_submarine.operate()
 

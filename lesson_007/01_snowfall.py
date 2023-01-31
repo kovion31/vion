@@ -30,6 +30,7 @@ class Snowflake:
     def can_fall(self):
         if self.y < 0:
             self.y += 600
+            # fallen_flakes += 1
         if self.x > 600:
             self.x -= 600
 
@@ -69,7 +70,7 @@ while True:
         flake.move()
         flake.draw()
         flake.can_fall()
-    # fallen_flakes += get_fallen_flakes()  # подчитать сколько снежинок уже упало
+        # fallen_flakes += get_fallen_flakes()  # подчитать сколько снежинок уже упало
     # if fallen_flakes:
     #     append_flakes(count=fallen_flakes)  # добавить еще сверху
     sd.sleep(0.1)
