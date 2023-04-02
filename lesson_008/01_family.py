@@ -137,6 +137,9 @@ class Cat:
     def __init__(self):
         pass
 
+    def __str__(self):
+        return super(Cat, self).__str__()
+
     def act(self):
         pass
 
